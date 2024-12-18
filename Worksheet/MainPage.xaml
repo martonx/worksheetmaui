@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Worksheet.MainPage">
+
+    <ScrollView>
+        <Grid RowDefinitions="*" ColumnDefinitions="1*, 2*">
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="30,0" Spacing="25">
+                <Label
+                    Text="Munkalap készítés"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1"/>
+                <Picker
+                    x:Name="BrandPicker"
+                    Title="Márka" />
+                <Label Text="Rendszám" />
+                <Entry x:Name="LicensePlate" />
+                <Label Text="Kilométeróra" />
+                <Entry x:Name="Odometer" />
+                <Label Text="Dátum" />
+                <DatePicker
+                    x:Name="CreateDate"/>
+                <Button
+                    x:Name="SaveButton"
+                    Text="Mentés" 
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnSaveClicked"
+                    HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
